@@ -1,0 +1,6 @@
+{
+    "customers": [
+        {"id": 1, "name": "Kwame Nkrumah", "account_balance": 1200, "account_number": "0011002233"},
+        {"id": 2, "name": "Abena Serwaa", "account_balance": 300, "account_number": "0044005577"}
+    ]
+}

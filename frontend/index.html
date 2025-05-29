@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Password Reset&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style type="text/css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Google webfonts. Recommended to include the .woff version for cross-client compatibility.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media screen {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@font-face {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Source Sans Pro';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: normal;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@font-face {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Source Sans Pro';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: normal;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Avoid browser level font resizing.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* 1. Windows Mobile</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* 2. iOS / OSX</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>table,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>td,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>a {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-ms-text-size-adjust: 100%; /* 1 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-webkit-text-size-adjust: 100%; /* 2 */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Remove extra space added to tables and cells in Outlook.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>table,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>td {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mso-table-rspace: 0pt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mso-table-lspace: 0pt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Better fluid images in Internet Explorer.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-ms-interpolation-mode: bicubic;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Remove blue links for iOS devices.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>a[x-apple-data-detectors] {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: inherit !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: inherit !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: inherit !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: inherit !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: inherit !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none !important;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Fix centering issues in Android 4.4.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>div[style*="margin: 16px 0;"] {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 !important;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100% !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100% !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0 !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 !important;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/**</p>
+<p class="p1"><span class="Apple-converted-space">   </span>* Collapse table borders to avoid space between cells.</p>
+<p class="p1"><span class="Apple-converted-space">   </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">  </span>table {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-collapse: collapse !important;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>a {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #1a82e2;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body style="background-color: #e9ecef;"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- start preheader --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>A preheader is the short summary text that follows the subject line when an email is viewed in the inbox.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- end preheader --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- start body --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- start logo --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td align="center" bgcolor="#e9ecef"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table align="center" border="0" cellpadding="0" cellspacing="0" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td align="center" valign="top" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="center" valign="top" style="padding: 36px 24px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;a href="https://sendgrid.com" target="_blank" style="display: inline-block;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="./img/paste-logo-light@2x.png" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- end logo --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- start hero --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td align="center" bgcolor="#e9ecef"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table align="center" border="0" cellpadding="0" cellspacing="0" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td align="center" valign="top" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;"&gt;Reset Your Password&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- end hero --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- start copy block --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td align="center" bgcolor="#e9ecef"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table align="center" border="0" cellpadding="0" cellspacing="0" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td align="center" valign="top" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- start copy --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;Tap the button below to reset your customer account password. If you didn't request a new password, you can safely delete this email.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- end copy --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- start button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="left" bgcolor="#ffffff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;td align="center" bgcolor="#ffffff" style="padding: 12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;table border="0" cellpadding="0" cellspacing="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                      </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td align="center" bgcolor="#1a82e2" style="border-radius: 6px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                          </span>&lt;a href="https://sendgrid.com" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;"&gt;Do Something Sweet&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                      </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- end button --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- start copy --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;If that doesn't work, copy and paste the following link in your browser:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;&lt;a href="https://sendgrid.com" target="_blank"&gt;https://same-link-as-button.url/xxx-xxx-xxxx&lt;/a&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- end copy --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- start copy --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;Cheers,&lt;br&gt; Paste&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- end copy --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- end copy block --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- start footer --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td align="center" bgcolor="#e9ecef" style="padding: 24px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table align="center" border="0" cellpadding="0" cellspacing="0" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td align="center" valign="top" width="600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- start permission --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;You received this email because we received a request for [type_of_action] for your account. If you didn't request [type_of_action] you can safely delete this email.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- end permission --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- start unsubscribe --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;To stop receiving these emails, you can &lt;a href="https://sendgrid.com" target="_blank"&gt;unsubscribe&lt;/a&gt; at any time.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin: 0;"&gt;Paste 1234 S. Broadway St. City, State 12345&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- end unsubscribe --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!--[if (gte mso 9)|(IE)]&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;![endif]--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- end footer --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- end body --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

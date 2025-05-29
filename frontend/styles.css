@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; background: #fafbff; padding: 40px; }
+#chat { background: #fff; border-radius: 12px; max-width: 400px; margin: auto; box-shadow: 0 2px 8px #ccc; padding: 16px; }
+#chat-messages { min-height: 120px; margin-bottom: 10px; }
+.msg { margin-bottom: 8px; }
+.msg.user { color: #006600; }
+.msg.bot { color: #003366; }
+input[type="text"] { width: 70%; padding: 6px; }
+button { margin-left: 5px; padding: 6px 12px; }

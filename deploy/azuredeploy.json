@@ -4,28 +4,26 @@
   "parameters": {
     "webAppName": {
       "type": "string",
-      "defaultValue": "ddb-ai-agent-demo"
+      "metadata": {
+        "description": "Name of the Web App."
+      }
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]"
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
     }
+  },
+  "variables": {
+    "appServicePlanName": "[concat(parameters('webAppName'), '-plan')]"
   },
   "resources": [
     {
-      "type": "Microsoft.Web/sites",
-      "apiVersion": "2022-03-01",
-      "name": "[parameters('webAppName')]",
-      "location": "[parameters('location')]",
-      "kind": "app",
-      "properties": {
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', concat(parameters('webAppName'),'-plan'))]"
-      }
-    },
-    {
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2022-03-01",
-      "name": "[concat(parameters('webAppName'),'-plan')]",
+      "name": "[variables('appServicePlanName')]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "B1",
@@ -34,12 +32,24 @@
       "properties": {
         "reserved": false
       }
+    },
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2022-03-01",
+      "name": "[parameters('webAppName')]",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+      ],
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+      }
     }
   ],
   "outputs": {
     "webAppUrl": {
       "type": "string",
-      "value": "[reference(parameters('webAppName')).defaultHostName]"
+      "value": "[concat('https://', parameters('webAppName'), '.azurewebsites.net')]"
     }
   }
 }
